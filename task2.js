@@ -7,5 +7,5 @@ export class FriendNames {
        
   }
 
-const  nombres = new FriendNames("Katherine","santiago","John")
-console.log(nombres)
+//const  nombres = new FriendNames("Katherine","santiago","John")
+//console.log(nombres)

@@ -1,14 +1,17 @@
-export function ageCalculator(Paño,Pmes,Pdia) {
-let año = Paño
-let mes = Pmes
-let dia = Pdia
+export function ageCalculator(Pyear,Pmonth,Pday) {
+  let year = Pyear
+  let month = Pmonth - 1
+  let day = Pday
 
-//   const fechaActual = new Date();
-//   const diaMes = fechaActual.getDate();
-//   diaMes = diaMes.getTime()
-//   const mesActual = fechaActual.getMonth();
-//   const añoActual = fechaActual.getFullYear();
-//   return diaMes
+  const fechaActual = new Date();
+  const fechanacimiento = new Date(year,month,day);
+  let edad = fechaActual.getFullYear() - fechanacimiento.getFullYear()
+  let difMes = fechaActual.getMonth() - fechanacimiento.getMonth()
+ 
+  if (difMes < 0 || difMes === 0 && fechaActual.getDate() < fechanacimiento.getDate() ){
+    edad -= 1
+  }
+  return edad
 }
 
-console.log(ageCalculator(1992,10,10))
+//console.log(ageCalculator(2001,12,25))
